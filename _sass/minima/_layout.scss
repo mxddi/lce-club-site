@@ -350,6 +350,15 @@ clear: both;
   margin: 30px 0;
 }
 
+#earth-img {
+  width: 550px;
+
+  @include media-query($on-laptop) {
+    width: 300px;
+    margin-left: 30px;
+  }
+}
+
 h1 {
   font-family: 'DM Serif Display', serif;
   font-size: 70px;
