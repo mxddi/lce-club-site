@@ -1,0 +1,79 @@
+---
+layout: default
+title: HOME
+permalink: /home/
+---
+
+<div class="middle-wrapper">
+    <div class="bss-slides" tabindex="1" autofocus="autofocus">
+        <figure>
+          <a data-flickr-embed="false" href="https://www.flickr.com/photos/194763409@N08/51950749823/in/dateposted-public/" title="Zeytinpark"><img src="https://live.staticflickr.com/65535/51950749823_a8705ba832_h.jpg" width="1600" height="1105" alt="Zeytinpark"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>        </figure>
+        <figure>
+          <a data-flickr-embed="false" href="https://www.flickr.com/photos/194763409@N08/51950748513/in/dateposted-public/" title="Foro di Nerva"><img src="https://live.staticflickr.com/65535/51950748513_79873331e7_k.jpg" width="2048" height="1536" alt="Foro di Nerva"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+        </figure>
+        <figure>
+          <a data-flickr-embed="false" href="https://www.flickr.com/photos/194763409@N08/51950892047/in/dateposted-public/" title="Termessos"><img src="https://live.staticflickr.com/65535/51950892047_170041b20c_k.jpg" width="2048" height="1536" alt="Termessos"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+        </figure>
+        <figure>
+          <a data-flickr-embed="false" href="https://www.flickr.com/photos/194763409@N08/51967646330/in/dateposted-public/" title="Fethiye"><img src="https://live.staticflickr.com/65535/51967646330_9f77c2ba82_k.jpg" width="1536" height="2048" alt="Fethiye"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+        </figure>
+        <figure>
+          <a data-flickr-embed="false" href="https://www.flickr.com/photos/194763409@N08/51966079957/in/dateposted-public/" title="Fethiye"><img src="https://live.staticflickr.com/65535/51966079957_2d762aa0e1_k.jpg" width="2048" height="1536" alt="Fethiye"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+        </figure>
+    </div>
+    {% comment %} <img src="/assets/images/crosshatch.png" style="position: absolute; top: 320px; left: 180px; width: 400px;"> {% endcomment %}
+</div>
+  
+  <script>
+      makeBSS('.bss-slides');
+  </script>
+  
+  <div class="home-feed-header">
+    <p class="home-feed-header-featured">featured updates
+    {% comment %} <p class="home-feed-header-updates">UPDATES {% endcomment %}
+  </div>
+  
+  
+  <div class="full-wrapper" id="home-feed-wrapper">
+    <div class="middle-wrapper" style="padding: 20px; padding-bottom: 10px; background-color: white">
+      <ul class="post-list">
+            {%- for post in site.posts limit: 10 -%}
+              <li>
+                <div class="home-feed-post-wrapper">         
+                    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                    <span class="home-feed-post-date">{{ post.date | date: date_format }}</span>
+                    
+                    {%- if post.image %}
+                    <a href="{{ post.url | relative_url }}"><img class="home-feed-post-img" src={{post.image | escape }}></a>
+                    {%- endif -%}
+  
+                    <a class="home-feed-post-link" href="{{ post.url | relative_url }}">
+                      {{ post.title | escape }}
+                    </a>
+  
+                    
+                    <div class ="excerpt">
+                      {{ post.excerpt }}
+                    </div>
+  
+                </div>
+              </li>
+            {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+  
+      <div class="middle-wrapper" id="home-about-wrapper">
+        <div id="home-about-img-container">
+          <img id="home-about-img" src="https://live.staticflickr.com/65535/51951348525_b4c73ef92f_h.jpg" width="1600" height="1600" alt="antalya zeytinpark">
+        </div>
+        <div id="home-about-excerpt-container">
+          <h4 id="home-about-title">NICE TO MEET YOU!</h4>
+          <p id="home-about-excerpt">Hi! We're Alex and Maddi, two people who are eager to explore the world. We started dreaming of this project in 2020, and we're finally bringing this adventure to life. Join us as we travel thousands of miles from home to make friends and work on sustainable projects.</p>
+          <a href="/about/"><div class="site-button" id="home-about-button">MORE ABOUT US</div></a>
+        </div>
+      </div>
+      
+      <div class="full-wrapper" id="home-feed-wrapper">
+  
+</div>

@@ -1,0 +1,52 @@
+---
+layout: default
+title: CONTACT
+permalink: /contact/
+---
+
+<div class="wrapper" style="align-items: center">
+    <link href="/assets/css/contact-form.css" rel="stylesheet">
+    <h2 class="fcf-h4">REACH OUT TO ME</h2>
+    
+    <form id="fcf-form-id" class="fcf-form-class" method="post" action="https://formsubmit.co/3aba0e6d4a289e42df26d6a901de9313">  
+        <div class="fcf-wrapper">
+            <div class="fcf-body">
+            {% comment %} <form id="fcf-form-id" class="fcf-form-class" method="post" action="/php/contact-form-process.php/"> {% endcomment %}           
+                <div class="fcf-form-group">
+                    <label for="Name" class="fcf-label">Your name</label>
+                    <div class="fcf-input-group">
+                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                    </div>
+                </div>
+
+                <div class="fcf-form-group">
+                    <label for="Email" class="fcf-label">Your email address</label>
+                    <div class="fcf-input-group">
+                        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                    </div>
+                </div>
+                
+                <div class="fcf-input-group" >
+                    <p id="fcf-excerpt"> Feel free to ask anything! I'm always happy to share and exchange travel information. You can also email me directly at someplacesolo.info@gmail.com
+                </div>
+
+            </div>
+
+            <div class="fcf-body" id="fcf-body-mssg">
+                <div class="fcf-form-group">
+                    <label for="Message" class="fcf-label">Your message</label>
+                    <div class="fcf-input-group">
+                        <textarea id="Message" name="Message" class="fcf-form-control" rows="7" maxlength="3000" required></textarea>
+                    </div>
+                </div>
+
+                <div class="fcf-form-group">
+                    <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+                </div>
+                {% comment %} <div class="fcf-credit" id="fcf-credit">
+                Simple HTML email form provided by: <a href="https://www.freecontactform.com" target="_blank">FreeContactForm.com</a>
+                </div> {% endcomment %}
+            </div>
+        </div>
+    </form>
+</div>

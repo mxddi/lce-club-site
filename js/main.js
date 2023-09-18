@@ -1,0 +1,2 @@
+// JS for Journal page
+
