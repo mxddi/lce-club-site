@@ -1,6 +1,7 @@
 /**
  * Site header
  */
+
 .site-header {
   min-height: $spacing-unit * 1.865;
   font-weight: light;
@@ -132,20 +133,11 @@
   }
 }
 
-.site-button {
-  border: 4px solid $primary-color;
-  border-radius: 5px;
-  color: $primary-color;
-  padding: 5px;
-  text-align: center;
-  letter-spacing: 2px;
-  font-family: 'Poppins';
-  font-weight: 700;
-  }
 
 /**
   * Site footer
   */
+
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: 35px 0;
@@ -221,9 +213,9 @@
 } */
 
 .footer-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
   @include media-query($on-laptop) {
     flex-direction: column;
@@ -260,8 +252,9 @@
   height: 18px;
 }
 
+
 /**
-* page layout
+* page layout, wrappers
 */
 
 .wrapper {
@@ -320,26 +313,113 @@ padding: 0px;
 }
 
 .page-wrapper {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-margin-top: 75px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 75px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.center-content-wrapper-column {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 17%;
+  margin-right: 17%;
+}
+
+.center-content-wrapper-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-left: 10%;
+  margin-right: 10%;
+
+  @include media-query($on-laptop) {
+    flex-flow: column wrap;
+  }
+
+}
+
+.form-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#info-section-container {
+  position: relative;
+  top: -200px;
+  background-color: #fff;
+  box-shadow: 0px -3px 5px grey;
+  padding-top: 30px;
+  z-index: 2;
+
+  @include media-query($on-laptop) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: unset;
+    margin-top: 30px;
+  }
+}
+
+.info-section-block {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+
+.info-section-img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+
+  @include media-query($on-laptop) {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.info-section-descrip {
+  width: 350px;
+  margin-top: 30px;
+  @include media-query($on-laptop) {
+    width: 400px;
+  }
 }
 
 %clearfix:after {
-content: "";
-display: table;
-clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
+
 
 /**
 * page content
 */
 
 .page-content {
-  margin-left: 60px;
+  margin-left: 90px;
   @include media-query($on-laptop) {
     margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -350,28 +430,54 @@ clear: both;
   margin: 30px 0;
 }
 
-#earth-img {
+#home-earth-img {
   width: 550px;
+  height:fit-content;
+  margin-left: 120px;
 
   @include media-query($on-laptop) {
-    width: 300px;
-    margin-left: 30px;
+    display: none;
   }
+}
+
+#home-button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#home-button-container {
+  @include media-query($on-laptop) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+}
+
+.home-header {
+  @include media-query($on-laptop) {
+    text-align: center;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+}
+
+#home-h3 {
+  margin-top: 30px;
 }
 
 h1 {
   font-family: 'DM Serif Display', serif;
-  font-size: 70px;
+  font-size: 72px;
   color: $primary-color;
   line-height: 1.3;
   @include media-query($on-laptop) {
-    font-size: 50px;
+    font-size: 58px;
   }
 }
 
 h2 {
   font-family: 'DM Serif Display', serif;
-  font-size: 40px;
+  font-size: 28px;
   color: $primary-color;
   line-height: 1.3;
   @include media-query($on-laptop) {
@@ -387,3 +493,33 @@ h3 {
     font-size: 16px;
   }
 }
+
+
+/**
+  * Buttons
+  */
+
+  .site-button {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    width: 40%;
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: $bold-font-weight;
+  }
+  
+  .site-button-outline {
+    display: flex;
+      border: 4px solid $primary-color;
+      border-radius: 10px;
+      width: 40%;
+      color: $primary-color;
+      padding: 10px;
+      text-align: center;
+      letter-spacing: 2px;
+      font-weight: $bold-font-weight;
+    }
