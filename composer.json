@@ -1,0 +1,5 @@
+{
+    "require": {
+        "yizack/instagram-feed": "^1.1"
+    }
+}

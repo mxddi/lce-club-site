@@ -35,7 +35,7 @@
  p, blockquote, pre,
  ul, ol, dl, figure,
  %vertical-rhythm {
-   margin-bottom: $spacing-unit / 2;
+   margin-bottom: calc($spacing-unit / 2);
    line-height: 2.2;
  }
  
@@ -87,19 +87,18 @@
  h2 {
   font-weight: $light-font-weight;
   font-size: ($base-font-size)*2;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.4px;
  }
 
  h3 {
    font-weight: $base-font-weight;
    font-size: ($base-font-size)*1.3;
-   letter-spacing: 1.5px;
+   letter-spacing: 1px;
  }
 
  h4 {
    font-weight: $base-font-weight;
    font-size: ($base-font-size)*2.5;
-   letter-spacing: 2px;
  }
  
  /**
@@ -123,22 +122,6 @@
   background: linear-gradient(180deg,rgba(255,255,255,0) 65%, $primary-color 65%);
   border-bottom: none !important;
 }
- 
- /**
-  * Blockquotes
-  */
- blockquote {
-   color: $text-color;
-   border-left: 4px solid $text-color;
-   padding-left: $spacing-unit / 2;
-   @include relative-font-size(1.125);
-   letter-spacing: -1px;
-   font-style: italic;
- 
-   > :last-child {
-     margin-bottom: 0;
-   }
- }
  
  /**
   * Code formatting
@@ -202,7 +185,7 @@
      }
    }
    th, td {
-     padding: ($spacing-unit / 3) ($spacing-unit / 2);
+     padding: ($spacing-unit) ($spacing-unit);
    }
    th {
      background-color: lighten($text-color, 3%);
