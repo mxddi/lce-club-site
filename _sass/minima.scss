@@ -11,7 +11,7 @@ $base-font-weight: 400 !default;
 $light-font-weight: 300 !default;
 $bold-font-weight: 700 !default;
 
-$base-line-height: 1.5 !default;
+$base-line-height: 1.3 !default;
 $spacing-unit:     30px !default;
 
 $background-color: white !default;
@@ -25,9 +25,8 @@ $table-text-align: left !default;
 
 // Width of the content area
 $content-width:    800px !default;
-
-$on-palm:          600px !default;
 $on-laptop:        800px !default;
+$on-palm:          600px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
