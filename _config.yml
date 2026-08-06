@@ -23,7 +23,7 @@ email: lce_club@student.edmonds.edu
 description: >- # this means to ignore newlines until "baseurl:"
   LCE welcomes all students who are interested in learning languages of all kinds and travel to join together in a safe, inclusive group where we all support each other's language-learning journey.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://lceclub.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://lceclub.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  mxddi
 
 # Build settings
